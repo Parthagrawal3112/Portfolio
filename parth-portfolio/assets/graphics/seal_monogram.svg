@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <path id="textPath" d="M 100, 100 m -72, 0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+  </defs>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#C2410C" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="100" cy="100" r="86" fill="#F3ECE2" stroke="#181512" stroke-width="1.2"/>
+  <text font-family="'JetBrains Mono', monospace" font-size="8.8" font-weight="600" fill="#181512" letter-spacing="2.2">
+    <textPath href="#textPath" startOffset="0%">
+      PARTH AGRAWAL • BTECH CS + MBA • CLASS OF 2025 •
+    </textPath>
+  </text>
+  <circle cx="100" cy="100" r="50" fill="#FAF7F2" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="100" y="107" font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#181512" text-anchor="middle">PA</text>
+</svg>
