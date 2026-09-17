@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parth Agrawal | Spatial Executive OS • TPM • Founder's Office</title>
+  <meta name="description" content="Spatial Executive OS and Interactive Dossier of Parth Agrawal. Immediately available candidate for TPM, APM, Founder's Office, and Business Analysis. BTech CS + MBA Finance (NMIMS '25).">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            alabaster: '#FAF6F0',
+            sand: '#F2ECE1',
+            espresso: '#141210',
+            terracotta: '#C2410C',
+            ochre: '#B45309',
+            emeraldAccent: '#047857'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Three.js (WebGL 3D Engine) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="selection:bg-amber-900/20 selection:text-amber-900">
+
+  <!-- Custom Fluid Magnetic Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-dot" class="custom-cursor-dot"></div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="nav-container">
+    <nav class="nav-pill">
+      
+      <!-- Brand Seal -->
+      <a href="#hero" class="flex items-center gap-3 text-stone-950 no-underline group magnetic-btn" onclick="audio.playHaptic(900, 0.02)">
+        <div class="w-9 h-9 rounded-full bg-stone-950 flex items-center justify-center font-bold text-amber-50 font-serif text-sm shadow-sm group-hover:bg-amber-800 transition-all">
+          PA
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-sm tracking-tight text-stone-950">Parth Agrawal</span>
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          </div>
+          <div class="flex items-center gap-1.5 text-[10px] text-emerald-800 font-mono font-semibold tracking-wider">
+            <span>AVAILABLE IMMEDIATELY</span>
+            <span class="text-stone-400">•</span>
+            <span id="live-ist-clock" class="text-stone-500 font-normal">--:--:-- IST</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Quick Action Controls -->
+      <div class="flex items-center gap-2.5">
+        <!-- SFX Button -->
+        <button id="sfx-toggle-btn" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900/5 hover:bg-stone-900/10 border border-stone-900/10 text-xs font-mono text-stone-700 transition-all cursor-pointer magnetic-btn" title="Toggle Spatial Audio">
+          <i id="sfx-icon" data-lucide="volume-x" class="w-3.5 h-3.5"></i>
+          <span id="sfx-label">SFX: OFF</span>
+        </button>
+
+        <!-- Official PDF Resume Download/View Button -->
+        <a href="assets/Parth_Agrawal_Resume.pdf" target="_blank" download="Parth_Agrawal_Resume.pdf" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-stone-900/5 hover:bg-stone-900/10 border border-stone-900/15 text-xs font-semibold text-stone-800 hover:border-stone-900 transition-all cursor-pointer magnetic-btn" title="Download Official 1-Page Resume PDF">
+          <i data-lucide="file-text" class="w-3.5 h-3.5 text-amber-800"></i>
+          <span>Resume PDF</span>
+        </a>
+
+        <!-- Fast-Track Hire CTA -->
+        <a href="#contact" class="btn-primary py-1.5 px-4 text-xs font-bold magnetic-btn">
+          <span>Hire Parth</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Spatial Stage -->
+  <section id="hero" class="relative pt-32 pb-16 md:pt-40 md:pb-20 z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Top Badges: Immediate Availability & Relocation Notice -->
+      <div class="flex flex-wrap items-center gap-3 mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-700/10 border border-emerald-700/30 text-xs font-bold text-emerald-900 backdrop-blur-md shadow-sm">
+          <span class="status-pulse"></span>
+          <span>IMMEDIATELY AVAILABLE • 0 NOTICE PERIOD</span>
+        </div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-stone-900/10 text-xs font-medium text-stone-700">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-800"></i>
+          <span>Open to Relocate (Pan-India / Global / Remote / Hybrid)</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Editorial Headline -->
+        <div class="lg:col-span-7 flex flex-col space-y-6">
+          <div class="space-y-3">
+            <span class="font-mono text-xs font-bold tracking-widest uppercase text-amber-800">// TECHNICAL PROGRAM MANAGER • FOUNDER'S OFFICE • APM</span>
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight text-stone-950">
+              "I love <span class="text-terracotta italic font-normal">muddy waters</span> — turning chaos into clarity, and engineering into enterprise ROI."
+            </h1>
+          </div>
+
+          <p class="text-stone-700 text-base sm:text-lg leading-relaxed max-w-2xl">
+            Give me an ambiguous, ill-defined problem with no existing playbook. I dive in, clear the fog, align cross-functional stakeholders, and build high-velocity execution systems. 
+            Dual-degree foundation: <strong class="text-stone-900">BTech Computer Science</strong> + <strong class="text-stone-900">MBA Finance & BI</strong> (NMIMS Class of 2025).
+          </p>
+
+          <!-- Fast Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <a href="#switchboard" class="btn-primary magnetic-btn">
+              <i data-lucide="play" class="w-4 h-4 text-amber-200"></i>
+              <span>Launch Executive OS</span>
+            </a>
+            <a href="assets/Parth_Agrawal_Resume.pdf" target="_blank" download="Parth_Agrawal_Resume.pdf" class="btn-secondary magnetic-btn" title="Download Official Resume PDF">
+              <i data-lucide="file-text" class="w-4 h-4 text-amber-800"></i>
+              <span>Download Resume PDF</span>
+            </a>
+            <a href="https://wa.me/918306408819?text=Hi%20Parth,%20saw%20your%20spatial%20portfolio%20and%20wanted%20to%20connect." target="_blank" class="btn-secondary magnetic-btn">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-700"></i>
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
+
+          <!-- Quick Connect Details -->
+          <div class="flex flex-wrap items-center gap-5 pt-4 border-t border-stone-900/10 text-xs text-stone-600 font-mono">
+            <span class="flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-amber-800"></i> agrawalparth3112@gmail.com</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-amber-800"></i> +91 8306408819</span>
+            <span class="flex items-center gap-1.5 text-emerald-800 font-semibold"><i data-lucide="check-circle" class="w-3.5 h-3.5"></i> 0 Days Notice</span>
+          </div>
+        </div>
+
+        <!-- Right: Portrait Card with Spatial Depth -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md spatial-card p-3" data-cursor="view">
+            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden">
+              <img src="assets/parth_hero.jpg" alt="Parth Agrawal" class="w-full h-full object-cover object-top">
+              
+              <!-- Floating Overlay Badge -->
+              <div class="absolute bottom-3 left-3 right-3 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-stone-900/10 shadow-lg flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-xs uppercase tracking-wider text-stone-950">Parth Agrawal</span>
+                  <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-mono text-[10px] font-bold">READY TO SHIP</span>
+                </div>
+                <div class="text-xs text-stone-700 flex items-center gap-1.5">
+                  <i data-lucide="award" class="w-3.5 h-3.5 text-amber-800 shrink-0"></i>
+                  <span>BTech CS + MBA Finance • NMIMS '25</span>
+                </div>
+                <div class="text-[11px] text-stone-500 font-mono flex items-center justify-between pt-1 border-t border-stone-900/10">
+                  <span class="text-amber-800 font-semibold">1.4 Yrs SaaS Delivery</span>
+                  <span class="text-emerald-800 font-semibold">Pan-India Relocation OK</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE EXECUTIVE SWITCHBOARD (Interactive Multi-Mode Control Deck)
+       ========================================================================= -->
+  <section id="switchboard" class="py-16 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <!-- Switchboard Tab Nav -->
+      <div class="flex flex-col items-center text-center mb-10">
+        <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-800 mb-2">// INTERACTIVE MULTI-MODE DOSSIER</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-950 mb-6">The Executive Switchboard</h2>
+        
+        <div class="switchboard-nav flex flex-wrap justify-center gap-1">
+          <button class="switchboard-tab-btn active" data-mode="speedrun">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>⚡ 60-Sec Speed-Run</span>
+          </button>
+          <button class="switchboard-tab-btn" data-mode="quest">
+            <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+            <span>🎮 Muddy Waters Quest</span>
+          </button>
+          <button class="switchboard-tab-btn" data-mode="calculator">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            <span>🧮 Live ROI Simulator</span>
+          </button>
+          <button class="switchboard-tab-btn" data-mode="dossier">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>📑 Complete Track Record</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- PANEL 1: SPEED-RUN RECRUITER RADAR DECK -->
+      <div id="switchboard-panel-speedrun" class="space-y-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Competency Radar Canvas (Span 6) -->
+          <div class="lg:col-span-6 spatial-card p-6 md:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <span class="font-mono text-xs font-bold text-stone-500 uppercase">Core Capability Mapping</span>
+                  <h3 class="font-serif text-2xl font-bold text-stone-950">Competency Radar</h3>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-mono font-bold">Live Data</span>
+              </div>
+              <p class="text-xs text-stone-600 mb-4">
+                Quantitative index based on 1.4 years of enterprise SaaS delivery at Syncron and dual BTech CS + MBA Finance training.
+              </p>
+            </div>
+
+            <div class="relative w-full aspect-square max-h-[340px] flex items-center justify-center">
+              <canvas id="competency-radar-canvas" class="w-full h-full"></canvas>
+            </div>
+          </div>
+
+          <!-- Key Metrics & Immediate Hire Snapshot (Span 6) -->
+          <div class="lg:col-span-6 space-y-4 flex flex-col justify-between">
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="spatial-card p-5 border-l-4 border-l-amber-800">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-stone-950">1.4+ Yrs</div>
+                <div class="text-xs text-stone-800 font-semibold mt-1">Enterprise SaaS Delivery</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">TPM Governance at Syncron</div>
+              </div>
+
+              <div class="spatial-card p-5 border-l-4 border-l-emerald-800">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-emerald-800">80%</div>
+                <div class="text-xs text-stone-800 font-semibold mt-1">On-Target Velocity</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">Sustained Milestone Rate</div>
+              </div>
+
+              <div class="spatial-card p-5 border-l-4 border-l-stone-900">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-stone-950">0 Days</div>
+                <div class="text-xs text-stone-800 font-semibold mt-1">Notice Period</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">Ready for Immediate Join</div>
+              </div>
+
+              <div class="spatial-card p-5 border-l-4 border-l-terracotta">
+                <div class="text-2xl sm:text-3xl font-bold font-mono text-terracotta">-30%</div>
+                <div class="text-xs text-stone-800 font-semibold mt-1">OpEx Cost Cut</div>
+                <div class="text-[11px] text-stone-500 mt-0.5">7-Eleven LP Optimization</div>
+              </div>
+            </div>
+
+            <!-- Recruiter Executive Summary Card -->
+            <div class="spatial-card p-6 bg-gradient-to-br from-white via-amber-50/20 to-orange-50/30 border-2 border-amber-800/20">
+              <div class="flex items-center gap-2 mb-2 text-amber-800 font-bold text-xs uppercase tracking-wider font-mono">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                <span>Executive Summary For Hiring Managers</span>
+              </div>
+              <p class="text-xs sm:text-sm text-stone-700 leading-relaxed mb-4">
+                Parth Agrawal operates at the exact intersection of <strong>Technical Program Management</strong> and <strong>Founder's Office BizOps</strong>. He deconstructs ambiguous requirements into clear delivery roadmaps, unblocks engineering sprints, governs multi-tenant OPV SaaS releases, and aligns technical architectures with gross profit margins.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <a href="#contact" class="btn-primary py-2 px-4 text-xs font-bold">Fast-Track Interview →</a>
+                <a href="assets/Parth_Agrawal_Resume.pdf" target="_blank" download="Parth_Agrawal_Resume.pdf" class="btn-secondary py-2 px-4 text-xs font-bold">Download Official Resume</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PANEL 2: MUDDY WATERS QUEST (INTERACTIVE CRISIS RESOLUTION SIMULATOR) -->
+      <div id="switchboard-panel-quest" class="hidden space-y-6">
+        <div class="spatial-card p-6 md:p-8" data-cursor="play">
+          <div class="max-w-3xl mb-6">
+            <span class="font-mono text-xs font-bold text-terracotta uppercase">// PLAYABLE SCENARIO ENGINE</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-950 mt-1">Muddy Waters Crisis Resolution Simulator</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2">
+              Select a real-world enterprise crisis scenario below and test how Parth's dual BTech CS + MBA framework resolves chaos into clarity.
+            </p>
+          </div>
+
+          <!-- Dynamic Interactive Deck Hook -->
+          <div id="quest-scenario-deck"></div>
+        </div>
+      </div>
+
+      <!-- PANEL 3: LIVE ROI & COST-TO-SERVE SIMULATOR -->
+      <div id="switchboard-panel-calculator" class="hidden space-y-6">
+        <div class="spatial-card p-6 md:p-8" data-cursor="calc">
+          <div class="max-w-3xl mb-8">
+            <span class="font-mono text-xs font-bold text-amber-800 uppercase">// QUANTITATIVE IMPACT CALCULATOR</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-950 mt-1">Interactive ROI & Cost-to-Serve Simulator</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2">
+              Adjust the sliders below for your organization's engineering team size, sprint cycle, and cloud OpEx to calculate the projected velocity acceleration and savings with Parth managing delivery.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Controls (Span 7) -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <!-- Slider 1: Team Size -->
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-mono font-semibold">
+                  <span class="text-stone-700">Engineering Team Size:</span>
+                  <span id="calc-team-val" class="text-amber-800 font-bold">20 Engineers</span>
+                </div>
+                <input id="calc-team-size" type="range" min="5" max="80" value="20">
+              </div>
+
+              <!-- Slider 2: Sprint Length -->
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-mono font-semibold">
+                  <span class="text-stone-700">Sprint Cycle Length:</span>
+                  <span id="calc-sprint-val" class="text-amber-800 font-bold">2 Weeks</span>
+                </div>
+                <input id="calc-sprint-weeks" type="range" min="1" max="4" value="2">
+              </div>
+
+              <!-- Slider 3: Cloud & Infra Spend -->
+              <div class="space-y-2">
+                <div class="flex justify-between text-xs font-mono font-semibold">
+                  <span class="text-stone-700">Annual Cloud / SaaS Infra OpEx:</span>
+                  <span id="calc-spend-val" class="text-amber-800 font-bold">$250k / Year</span>
+                </div>
+                <input id="calc-infra-spend" type="range" min="50000" max="1000000" step="25000" value="250000">
+              </div>
+
+            </div>
+
+            <!-- Calculated Metrics Readout (Span 5) -->
+            <div class="lg:col-span-5 p-6 rounded-2xl bg-stone-950 text-white space-y-5 shadow-xl">
+              <div class="border-b border-white/15 pb-3">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-amber-300">Projected Value-Add Readout</span>
+                <div class="text-lg font-serif font-bold text-white mt-1">Parth Agrawal's Delivery Model</div>
+              </div>
+
+              <div class="space-y-3">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="text-stone-300">Developer Hours Saved:</span>
+                  <span id="calc-hours-saved" class="font-mono font-bold text-amber-400 text-sm">84 hrs / sprint</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <span class="text-stone-300">Projected OpEx Savings:</span>
+                  <span id="calc-opex-cut" class="font-mono font-bold text-emerald-400 text-sm">$125.0k / yr</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <span class="text-stone-300">Sprint Velocity Boost:</span>
+                  <span id="calc-velocity-gain" class="font-mono font-bold text-orange-400 text-sm">+22%</span>
+                </div>
+              </div>
+
+              <div class="pt-2 border-t border-white/10 text-[11px] font-mono text-stone-400">
+                ✓ Based on OPV governance gates and Cost-to-Serve optimization methods.
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 4: DEEP-DIVE COMPLETE DOSSIER -->
+      <div id="switchboard-panel-dossier" class="hidden space-y-8">
+        
+        <!-- Experience Spreads -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Syncron -->
+          <div class="spatial-card p-8 border-l-4 border-l-amber-800">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span class="pill-tag text-xs font-mono font-bold">1.4 YRS FULL-TIME</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-950 mt-1">Associate TPM</h3>
+                <div class="text-amber-800 font-semibold text-sm">Syncron Softwares</div>
+              </div>
+              <span class="text-xs font-mono text-stone-500">Jan 2025 – Apr 2026</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-stone-700 list-disc list-inside leading-relaxed mb-4">
+              <li>Governed <strong>5+ live enterprise SaaS products</strong> with distributed cross-functional teams.</li>
+              <li>Spearheaded <strong>One Product Version (OPV)</strong> release readiness gates and legal compliance.</li>
+              <li>Sustained an <strong>80% on-target delivery rate</strong> across critical path sprint milestones.</li>
+              <li>Conducted Cost-to-Serve discovery and PoC process structuring for executive decision makers.</li>
+            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+              <span class="pill-tag">Jira</span>
+              <span class="pill-tag">Confluence</span>
+              <span class="pill-tag">OPV Governance</span>
+              <span class="pill-tag">Cost-to-Serve</span>
+            </div>
+          </div>
+
+          <!-- RedHat -->
+          <div class="spatial-card p-8 border-l-4 border-l-stone-900">
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <span class="pill-tag text-xs font-mono font-bold">6 MONTHS</span>
+                <h3 class="font-serif text-2xl font-bold text-stone-950 mt-1">Finance & IT Intern</h3>
+                <div class="text-stone-900 font-semibold text-sm">RedHat</div>
+              </div>
+              <span class="text-xs font-mono text-stone-500">May 2024 – Oct 2024</span>
+            </div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-stone-700 list-disc list-inside leading-relaxed mb-4">
+              <li>Executed fixed-asset audit across South Asia, Australia & NZ (SAANZ) with <strong>80+ global stakeholders</strong>.</li>
+              <li>Bridged cross-departmental coordination between Accounts and IT to ensure enterprise data hygiene.</li>
+              <li>Managed multi-currency variance adjustments and reconciliation in Oracle & Firebase.</li>
+            </ul>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+              <span class="pill-tag">Oracle</span>
+              <span class="pill-tag">Firebase</span>
+              <span class="pill-tag">Audit Governance</span>
+              <span class="pill-tag">Fixed Assets</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Academic Foundation -->
+        <div class="spatial-card p-8">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-stone-900/10">
+            <div>
+              <span class="pill-tag text-xs font-mono font-bold">NMIMS CLASS OF 2025</span>
+              <h3 class="font-serif text-2xl font-bold text-stone-950 mt-1">Integrated MBA.Tech</h3>
+              <div class="text-amber-800 font-semibold text-sm">BTech Computer Science + MBA Finance & BI</div>
+            </div>
+            <div class="text-right">
+              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 font-mono text-xs font-bold">GPA: 3.25 / 4.0</span>
+              <div class="text-xs text-stone-500 mt-1">SVKM's NMIMS Navi Mumbai</div>
+            </div>
+          </div>
+          <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+            <div class="p-3 rounded-xl bg-white border border-stone-900/10">
+              <span class="text-stone-500 block">Class 12th (CBSE):</span>
+              <span class="font-bold text-stone-900">78.8%</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-stone-900/10">
+              <span class="text-stone-500 block">Class 10th (CBSE):</span>
+              <span class="font-bold text-stone-900">77.8%</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-stone-900/10">
+              <span class="text-stone-500 block">Notice Period:</span>
+              <span class="font-bold text-emerald-800">0 Days (Immediate)</span>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-stone-900/10">
+              <span class="text-stone-500 block">Relocation:</span>
+              <span class="font-bold text-amber-800">Pan-India / Global OK</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DIRECT FAST-TRACK RECRUITER LOUNGE
+       ========================================================================= -->
+  <section id="contact" class="py-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="font-mono text-xs font-bold uppercase tracking-widest text-emerald-800 mb-2">// DIRECT RECRUITER FAST-TRACK</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-950">Let's Connect & Start Building</h2>
+        <p class="text-stone-600 mt-3 text-base">
+          I am immediately available with zero notice period. Reach out directly via WhatsApp, email, or download my official resume.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: Instant Fast-Connect Cards (Span 5) -->
+        <div class="lg:col-span-5 space-y-4">
+          
+          <!-- WhatsApp Priority Fast-Track -->
+          <a href="https://wa.me/918306408819?text=Hi%20Parth,%20saw%20your%20portfolio%20and%20wanted%20to%20connect%20regarding%20an%20opportunity." target="_blank" class="spatial-card p-6 flex items-center justify-between border-2 border-emerald-700/30 bg-emerald-50/60 hover:border-emerald-700 group transition-all magnetic-btn">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-700/15 border border-emerald-700/30 flex items-center justify-center text-emerald-800">
+                <i data-lucide="message-circle" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-emerald-800 block uppercase font-bold tracking-wider">Fastest Direct Route</span>
+                <span class="font-bold text-sm text-stone-950 group-hover:text-emerald-900">WhatsApp (+91 8306408819)</span>
+                <span class="text-[11px] text-stone-600 font-mono block mt-0.5">Click to chat instantly</span>
+              </div>
+            </div>
+            <i data-lucide="arrow-up-right" class="w-5 h-5 text-emerald-800 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          </a>
+
+          <!-- Download Official Resume PDF Tile -->
+          <a href="assets/Parth_Agrawal_Resume.pdf" target="_blank" download="Parth_Agrawal_Resume.pdf" class="spatial-card p-6 flex items-center justify-between border border-amber-800/20 bg-white hover:border-amber-800 group transition-all magnetic-btn">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-800/10 border border-amber-800/20 flex items-center justify-center text-amber-800">
+                <i data-lucide="file-text" class="w-6 h-6 group-hover:scale-110 transition-transform"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-amber-800 block uppercase font-bold tracking-wider">Official Document</span>
+                <span class="font-bold text-sm text-stone-950 group-hover:text-amber-900">Download Resume PDF</span>
+                <span class="text-[11px] text-stone-500 font-mono block mt-0.5">Parth_Agrawal_Resume.pdf</span>
+              </div>
+            </div>
+            <i data-lucide="download" class="w-5 h-5 text-amber-800 group-hover:translate-y-0.5 transition-transform"></i>
+          </a>
+
+          <!-- Direct Email Tile -->
+          <div class="spatial-card p-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-stone-900/10 border border-stone-900/20 flex items-center justify-center text-stone-900">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-mono text-stone-500 block uppercase font-semibold">Primary Email</span>
+                <a href="mailto:agrawalparth3112@gmail.com" class="font-mono text-xs sm:text-sm font-bold text-stone-950 hover:text-amber-800 transition-colors select-all">agrawalparth3112@gmail.com</a>
+              </div>
+            </div>
+            <button onclick="copyText('agrawalparth3112@gmail.com', 'Email')" class="p-2.5 rounded-xl bg-stone-900/5 hover:bg-stone-900/15 text-stone-700 hover:text-stone-950 transition-colors magnetic-btn" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Direct Phone Tile -->
+          <div class="spatial-card p-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-terracotta/10 border border-terracotta/20 flex items-center justify-center text-terracotta">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-[11px] font-mono text-stone-500 block uppercase font-semibold">Direct Phone</span>
+                <a href="tel:+918306408819" class="font-mono text-xs sm:text-sm font-bold text-stone-950 hover:text-terracotta transition-colors">+91 8306408819</a>
+              </div>
+            </div>
+            <button onclick="copyText('+918306408819', 'Phone Number')" class="p-2.5 rounded-xl bg-stone-900/5 hover:bg-stone-900/15 text-stone-700 hover:text-stone-950 transition-colors magnetic-btn" title="Copy Phone">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- LinkedIn & GitHub Cards -->
+          <div class="grid grid-cols-2 gap-4">
+            <a href="https://linkedin.com/in/Parth-agrawal311" target="_blank" class="spatial-card p-5 flex flex-col justify-between hover:border-stone-900 group transition-all magnetic-btn">
+              <div class="flex items-center justify-between mb-3">
+                <i data-lucide="linkedin" class="w-6 h-6 text-stone-900 group-hover:scale-110 transition-transform"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-stone-400 group-hover:text-stone-900"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-stone-500 block font-semibold">LINKEDIN</span>
+                <span class="font-bold text-xs sm:text-sm text-stone-950 group-hover:text-amber-900">Parth-agrawal311</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Parthagrawal3112" target="_blank" class="spatial-card p-5 flex flex-col justify-between hover:border-stone-900 group transition-all magnetic-btn">
+              <div class="flex items-center justify-between mb-3">
+                <i data-lucide="github" class="w-6 h-6 text-amber-800 group-hover:scale-110 transition-transform"></i>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 text-stone-400 group-hover:text-stone-900"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-stone-500 block font-semibold">GITHUB</span>
+                <span class="font-bold text-xs sm:text-sm text-stone-950 group-hover:text-amber-900">Parthagrawal3112</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Fast Outreach Dispatch Form (Span 7) -->
+        <div class="lg:col-span-7 spatial-card p-8">
+          <div class="mb-6">
+            <h3 class="font-serif text-2xl font-bold text-stone-950">Send a Direct Message</h3>
+            <p class="text-xs text-stone-600 mt-1">Leave a note or role details. Triggers an instant dispatch to Parth.</p>
+          </div>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-stone-600 mb-1.5 font-semibold">YOUR NAME *</label>
+                <input type="text" name="name" required placeholder="e.g. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-900/15 text-stone-900 text-xs sm:text-sm focus:outline-none focus:border-amber-800 transition-colors shadow-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-stone-600 mb-1.5 font-semibold">EMAIL ADDRESS *</label>
+                <input type="email" name="email" required placeholder="sarah@company.com" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-900/15 text-stone-900 text-xs sm:text-sm focus:outline-none focus:border-amber-800 transition-colors shadow-sm">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-mono text-stone-600 mb-1.5 font-semibold">COMPANY / ORGANIZATION</label>
+                <input type="text" name="company" placeholder="e.g. Startup, Scale-up, Enterprise" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-900/15 text-stone-900 text-xs sm:text-sm focus:outline-none focus:border-amber-800 transition-colors shadow-sm">
+              </div>
+              <div>
+                <label class="block text-xs font-mono text-stone-600 mb-1.5 font-semibold">OPPORTUNITY TYPE</label>
+                <select name="topic" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-900/15 text-stone-900 text-xs sm:text-sm focus:outline-none focus:border-amber-800 transition-colors shadow-sm">
+                  <option value="Technical Program Manager (TPM)">Technical Program Manager (TPM)</option>
+                  <option value="Associate Program Manager (APM)">Associate Program Manager (APM)</option>
+                  <option value="Founder's Office / Chief of Staff">Founder's Office / Chief of Staff</option>
+                  <option value="Business / Product Analyst">Business / Product Analyst</option>
+                  <option value="General Conversation / Networking">General Conversation / Networking</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-mono text-stone-600 mb-1.5 font-semibold">MESSAGE / ROLE DETAILS *</label>
+              <textarea name="message" rows="4" required placeholder="Hi Parth, we loved your background and would love to connect about an immediate opening..." class="w-full px-4 py-3 rounded-xl bg-white border border-stone-900/15 text-stone-900 text-xs sm:text-sm focus:outline-none focus:border-amber-800 transition-colors shadow-sm"></textarea>
+            </div>
+
+            <div id="contact-status" class="hidden"></div>
+
+            <button type="submit" class="btn-primary w-full py-3.5 font-bold text-sm magnetic-btn">
+              <i data-lucide="send" class="w-4 h-4 text-amber-200"></i>
+              <span>Send Direct Message to Parth</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-stone-900/10 text-stone-600 text-xs font-mono relative z-10 bg-alabaster/90">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full bg-stone-900 flex items-center justify-center font-bold text-amber-50 text-xs font-serif">
+          PA
+        </div>
+        <span class="text-stone-950 font-bold">Parth Agrawal © 2026. Ready for Immediate Onboarding.</span>
+      </div>
+      <div class="flex items-center gap-4 text-stone-500">
+        <span>BTech CS + MBA Finance (NMIMS '25)</span>
+        <span>•</span>
+        <span class="text-emerald-800 font-bold">0 Days Notice</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/three-bg.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
